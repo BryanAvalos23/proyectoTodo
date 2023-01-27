@@ -1,0 +1,18 @@
+py -3 -m venv venv
+
+source venv/Scripts/activate
+
+instalaciones de dependencias
+
+pip install werkzeug
+pip install mysql-connect-python
+pip install Flask
+
+dependencias de modulos
+current_app mantiene la app que ejecutamos
+g variable usada en toda la app y podemos asignar distintas variable y luego acceder a ellas en otros archivos
+from flask.cli import with_appcontext nos permitira cuadno estemos ejecutando el script de la base de datos para el contexto de la db
+
+un blueprint es una agrupacion de modulos que hacen sentido
+
+functools es un set de instrucciones que podemos usar cuando estamos construyendo app
