@@ -7,8 +7,8 @@ from flask import (
 	render_template,
 	request,
 	url_for
-
 )
+
 from werkzeug.exceptions import abort
 from todo.auth import login_required
 from todo.db import get_db
@@ -24,5 +24,15 @@ def index():
 		'select t.id, t.description, u.username, t.completed, t.created_ad from todo t JOIN users u on t.created_by = u.id order by created_ad desc'
 	)
 	todos = c.fetchall()
-
 	return render_template('todo/index.html', todos=todos)
+
+@bp.route('/create', methods=['GET', 'POST'])
+@login_required
+def create():
+	return ''
+
+@bp.route('/update', methods=['GET', 'POST'])
+@login_required
+def update():
+	return ''
+
